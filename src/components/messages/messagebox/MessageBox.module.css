@@ -1,0 +1,10 @@
+.container {
+    height: calc(100% - 134px);
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}

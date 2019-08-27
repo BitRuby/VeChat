@@ -1,0 +1,41 @@
+div.messageTo {
+    text-align: right;
+    margin: 3px 0;
+}
+
+div.messageFrom {
+    text-align: left;
+    margin: 3px 0;
+}
+
+div.messageTo:first-child {
+    margin-top: auto;
+}
+
+div.messageFrom p,
+div.messageTo p {
+    font-weight: 100;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 0;
+    line-height: 20px;
+    text-align: justify;
+}
+
+div.messageTo p {
+    background: linear-gradient(to bottom, #161680 0%, rgb(192, 77, 224) 100%);
+    background-attachment: fixed;
+    color: #fff;
+    max-width: 40%;
+    float: right;
+}
+
+
+div.messageFrom p {
+    background: linear-gradient(to bottom, #f0f0f0 0%, rgb(240, 240, 240) 100%);
+    background-attachment: fixed;
+    color: #000;
+    max-width: 40%;
+    float: left;
+}

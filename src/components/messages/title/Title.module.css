@@ -1,0 +1,25 @@
+p {
+    font-weight: 700;
+    margin: 0;
+    margin-left: 10px;
+    line-height: 38px;
+}
+
+.container {
+    padding: 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    display: flex;
+}
+
+.img {
+    width: 24px;
+    height: 24px;
+}
+
+.image {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    position: relative;
+}

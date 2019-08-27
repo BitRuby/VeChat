@@ -1,0 +1,19 @@
+img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.image {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+}
