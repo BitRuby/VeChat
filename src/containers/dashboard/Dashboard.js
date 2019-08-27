@@ -34,6 +34,8 @@ class Dashboard extends Component {
             img={this.imgArray[user.id - 1]}
           />
         );
+      } else {
+        return null;
       }
     });
   };

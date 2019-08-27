@@ -15,65 +15,87 @@ class Messages extends Component {
     messages: [
       {
         id: "1",
-        convId: "1",
-        content: "Hello!",
-        date: "Sat Aug 24 2019 14:24:54"
+        content: [
+          {
+            id: "1",
+            content: "Hello!",
+            date: "Sat Aug 24 2019 14:24:54",
+            userId: "0"
+          },
+          {
+            id: "2",
+            content: "What's up!",
+            date: "Sat Aug 24 2019 14:24:56",
+            userId: "1"
+          },
+          {
+            id: "3",
+            content:
+              "I'm here in house please come to me it would be nice midnight ;)",
+            date: "Sat Aug 24 2019 14:24:56",
+            userId: "0"
+          },
+          {
+            id: "4",
+            content: "xd!",
+            date: "Sat Aug 24 2019 14:24:54",
+            userId: "1"
+          },
+          {
+            id: "5",
+            content: "das!",
+            date: "Sat Aug 24 2019 14:24:56",
+            userId: "0"
+          },
+          {
+            id: "6",
+            content: "hye ;)",
+            date: "Sat Aug 24 2019 14:24:58",
+            userId: "0"
+          },
+          {
+            id: "7",
+            content:
+              "I'm here in house please come to me it would be nice midnight ;)",
+            date: "Sat Aug 24 2019 14:24:56",
+            userId: "0"
+          },
+          {
+            id: "8",
+            content: "xd!",
+            date: "Sat Aug 24 2019 14:24:54",
+            userId: "1"
+          },
+          {
+            id: "9",
+            content: "das!",
+            date: "Sat Aug 24 2019 14:24:56",
+            userId: "0"
+          },
+          {
+            id: "10",
+            content: "hye ;)",
+            date: "Sat Aug 24 2019 14:24:58",
+            userId: "1"
+          }
+        ]
       },
       {
         id: "2",
-        convId: "1",
-        content: "What's up!",
-        date: "Sat Aug 24 2019 14:24:56"
-      },
-      {
-        id: "3",
-        convId: "1",
-        content:
-          "I'm here in house please come to me it would be nice midnight ;)",
-        date: "Sat Aug 24 2019 14:24:56"
-      },
-      {
-        id: "4",
-        convId: "1",
-        content: "xd!",
-        date: "Sat Aug 24 2019 14:24:54"
-      },
-      {
-        id: "5",
-        convId: "1",
-        content: "das!",
-        date: "Sat Aug 24 2019 14:24:56"
-      },
-      {
-        id: "6",
-        convId: "1",
-        content: "hye ;)",
-        date: "Sat Aug 24 2019 14:24:58"
-      },
-      {
-        id: "7",
-        convId: "1",
-        content:
-          "I'm here in house please come to me it would be nice midnight ;)",
-        date: "Sat Aug 24 2019 14:24:56"
-      },
-      {
-        id: "8",
-        convId: "1",
-        content: "xd!",
-        date: "Sat Aug 24 2019 14:24:54"
-      },
-      {
-        id: "9",
-        convId: "1",
-        content: "das!",
-        date: "Sat Aug 24 2019 14:24:56"
-      },
-      {
-        id: "10",
-        convId: "1",
-        content: "hye ;)",
-        date: "Sat Aug 24 2019 14:24:58"
+        content: [
+          {
+            id: "1",
+            content: "Where are you?",
+            date: "Sat Aug 24 2019 14:24:54",
+            userId: "2"
+          },
+          {
+            id: "2",
+            content: "At home, why?",
+            date: "Sat Aug 24 2019 14:29:12",
+            userId: "0"
+          }
+        ]
       }
     ]
   };
@@ -84,6 +106,8 @@ class Messages extends Component {
         <MessageBox
           conversations={this.state.conversations}
           messages={this.state.messages}
+          user={this.props.user}
+          imgSrc={this.props.img}
         />
         <Input />
       </div>

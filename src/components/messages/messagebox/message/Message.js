@@ -1,16 +1,23 @@
 import React from "react";
 import styles from "./Message.module.css";
 const message = props => {
-  return (
-    <React.Fragment>
-      <div className={styles.messageFrom}>
-        <p>{props.data.content}</p>
-      </div>
-      <div className={styles.messageTo}>
-        <p>{props.data.content}</p>
-      </div>
-    </React.Fragment>
-  );
+  const showMessages = () => {
+    if (props.data.userId === "0") {
+      return (
+        <div className={styles.messageTo}>
+          <p>{props.data.content}</p>
+        </div>
+      );
+    } else {
+      return (
+        <div className={styles.messageFrom}>
+          <p>{props.data.content}</p>
+        </div>
+      );
+    }
+  };
+
+  return <React.Fragment>{showMessages()}</React.Fragment>;
 };
 
 export default message;

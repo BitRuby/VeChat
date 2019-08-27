@@ -16,9 +16,20 @@ class MessageBox extends Component {
     this.scrollToBottom();
   }
   messages = () => {
-    return this.props.messages.map(element => {
-      console.log(element);
-      return <Message data={element} key={element.id}></Message>;
+    return this.props.conversations.map(conversation => {
+      if (conversation.users[1] === this.props.user.id) {
+        return this.props.messages.map(message => {
+          if (conversation.id === message.id) {
+            return message.content.map(single => {
+              return <Message data={single} key={single.id}></Message>;
+            });
+          } else {
+            return null;
+          }
+        });
+      } else {
+        return null;
+      }
     });
   };
   render() {
