@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-import Signup  from "./containers/signup/Signup";
+import Signup from "./containers/signup/Signup";
 import Dashboard from "./containers/dashboard/Dashboard";
 class App extends Component {
   state = {
     firstLogin: true
   };
-
 
   render() {
     return (

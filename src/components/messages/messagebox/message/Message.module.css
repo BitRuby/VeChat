@@ -6,6 +6,7 @@ div.messageTo {
 div.messageFrom {
     text-align: left;
     margin: 3px 0;
+    display: flex;
 }
 
 div.messageTo:first-child,
@@ -39,4 +40,16 @@ div.messageFrom p {
     color: #000;
     max-width: 40%;
     float: left;
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+}
+
+.image {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: relative;
 }

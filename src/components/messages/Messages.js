@@ -96,8 +96,45 @@ class Messages extends Component {
             userId: "0"
           }
         ]
+      },
+      {
+        id: "3",
+        content: []
+      },
+      {
+        id: "4",
+        content: []
+      },
+      {
+        id: "5",
+        content: []
       }
-    ]
+    ],
+    input: null
+  };
+  inputChangeHandler = event => {
+    this.setState({ input: event.target });
+  };
+  buttonSubmitHandler = event => {
+    event.preventDefault();
+    if (this.state.input === null) return null;
+    else {
+      const state = this.state;
+      state.messages.map(msg => {
+        if (msg.id === this.props.user.id) {
+          msg.content.push({
+            id: (msg.content.length + 1).toString(),
+            content: this.state.input.value,
+            date: new Date().toString(),
+            userId: "0"
+          });
+        } else {
+          return null;
+        }
+      });
+      state.input.value = "";
+      this.setState(state);
+    }
   };
   render() {
     return (
@@ -109,7 +146,10 @@ class Messages extends Component {
           user={this.props.user}
           imgSrc={this.props.img}
         />
-        <Input />
+        <Input
+          changed={this.inputChangeHandler}
+          onSubmit={this.buttonSubmitHandler}
+        />
       </div>
     );
   }

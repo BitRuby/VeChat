@@ -11,6 +11,9 @@ const message = props => {
     } else {
       return (
         <div className={styles.messageFrom}>
+          <div className={styles.image}>
+            <img src={props.imgSrc} alt="" className={styles.img} />
+          </div>
           <p>{props.data.content}</p>
         </div>
       );

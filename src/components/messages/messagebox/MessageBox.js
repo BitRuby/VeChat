@@ -21,7 +21,7 @@ class MessageBox extends Component {
         return this.props.messages.map(message => {
           if (conversation.id === message.id) {
             return message.content.map(single => {
-              return <Message data={single} key={single.id}></Message>;
+              return <Message data={single} key={single.id} imgSrc={this.props.imgSrc}></Message>;
             });
           } else {
             return null;
