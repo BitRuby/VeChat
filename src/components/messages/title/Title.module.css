@@ -13,8 +13,14 @@ p {
 }
 
 .img {
-    width: 24px;
-    height: 24px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 28px;
+    height: 28px;
 }
 
 .image {

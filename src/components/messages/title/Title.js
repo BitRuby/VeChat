@@ -7,7 +7,7 @@ const title = props => {
   return (
     <div className={styles.container}>
       <div style={sectionStyle} className={styles.image}>
-        <img src={props.imgSrc} alt="" className={styles.img}/>
+        <img src={props.imgSrc} className={styles.img} alt=""/>
       </div>
       <p>{props.user.username}</p>
     </div>

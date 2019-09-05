@@ -11,6 +11,6 @@ const input = props => {
       <button>Send</button>
     </form>
   );
-}; 
+};
 
 export default input;

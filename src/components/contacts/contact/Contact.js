@@ -8,7 +8,7 @@ const contact = props => {
   return (
     <React.Fragment>
       <div style={sectionStyle} className={styles.image}>
-        <img src={props.imgSrc} alt="" />
+        <img src={props.imgSrc} className={styles.img} alt="" />
       </div>
     </React.Fragment>
   );
