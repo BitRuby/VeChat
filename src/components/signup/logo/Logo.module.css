@@ -1,5 +1,5 @@
 .background {
-    background: url(../../assets/images/logo/Rectangle.png);
+    background: url(../../../assets/images/logo/Rectangle.png);
     width: 68px;
     height: 65px;
     margin: 0 auto;
@@ -8,14 +8,14 @@
 }
 
 .foreground {
-    background: url(../../assets/images/logo/Ve.png) no-repeat center center;
+    background: url(../../../assets/images/logo/Ve.png) no-repeat center center;
     width: 68px;
     height: 65px;
     transform: scale(0.95);
 }
 
 .title {
-    background: url(../../assets/images/logo/VeChat.png);
+    background: url(../../../assets/images/logo/VeChat.png);
     width: 174px;
     height: 54px;
     margin: 15px auto; 

@@ -1,1 +1,4 @@
 export const MESSAGESUBMIT = "MESSAGESUBMIT";
+export const SETAVATAR = "SETAVATAR";
+export const SETUSERNAME = "SETUSERNAME";
+export const SETCATEGORY = "SETCATEGORY";

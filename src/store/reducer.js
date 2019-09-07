@@ -105,11 +105,29 @@ const initialState = {
       id: "5",
       content: []
     }
-  ]
+  ],
+  avatar: null,
+  username: "",
+  category: null
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case actions.SETCATEGORY:
+      return {
+        ...state,
+        avatar: action.category
+      };
+    case actions.SETUSERNAME:
+      return {
+        ...state,
+        avatar: action.username
+      };
+    case actions.SETAVATAR:
+      return {
+        ...state,
+        avatar: action.avatar
+      };
     case actions.MESSAGESUBMIT:
       const newState = { ...state };
       newState.messages = copy(state.messages);
