@@ -23,7 +23,7 @@ const categories = props => {
           <option>Science</option>
           <option>Sports</option>
         </select>
-        <button className={styles.buttonCategory} onClick={props.searchHandler}>
+        <button type="submit" className={styles.buttonCategory} onClick={props.searchHandler}>
           Search
         </button>
         <button className={styles.buttonCategory} onClick={props.backHandler}>

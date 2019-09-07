@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import styles from "./Messages.module.css";
-import Input from "./input/Input";
-import Title from "./title/Title";
-import MessageBox from "./messagebox/MessageBox";
+import Input from "../../components/messages/input/Input";
+import Title from "../../components/messages/title/Title";
+import MessageBox from "../../components/messages/messagebox/MessageBox";
 import { connect } from "react-redux";
 import * as actions from "../../store/actions";
 class Messages extends Component {

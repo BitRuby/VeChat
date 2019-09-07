@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Logo from "../../components/signup/logo/Logo";
 import Settings from "../../components/signup/settings/Settings";
 import Categories from "../../components/signup/categories/Categories";
+import { Redirect } from "react-router-dom";
 
 import Modal from "../../components/ui/modal/Modal";
 import { connect } from "react-redux";
@@ -12,14 +13,15 @@ import avatar2 from "../../assets/images/icons/avatar2.png";
 import avatar3 from "../../assets/images/icons/avatar3.png";
 import avatar4 from "../../assets/images/icons/avatar4.png";
 import avatar5 from "../../assets/images/icons/avatar5.png";
-class Signup extends Component {
+export class Signup extends Component {
   state = {
     modalShow: false,
     avatar: avatar1,
     username: "",
     valid: false,
     step: 1,
-    category: "Cars"
+    category: "Cars",
+    submitted: false
   };
   avatars = [avatar1, avatar2, avatar3, avatar4, avatar5];
   showModalHandler = () => {
@@ -58,12 +60,19 @@ class Signup extends Component {
     event.preventDefault();
     if (this.state.username.length >= 6 && this.state.category !== "") {
       this.props.onCategorySet(this.state.category);
+      this.props.onAuthSet(true);
+      this.setState({ submitted: true });
     }
   };
 
   render() {
+    let redirect = null;
+    if (this.state.submitted) {
+      redirect = <Redirect to="/t/1" />;
+    }
     return (
       <div className={styles.background}>
+        {redirect}
         <div className={styles.gradient}>
           <div className={styles.container}>
             <Logo />
@@ -123,7 +132,9 @@ const mapDispatchToProps = dispatch => {
     onUsernameSet: username =>
       dispatch({ type: actions.SETUSERNAME, username: username }),
     onCategorySet: category =>
-      dispatch({ type: actions.SETCATEGORY, category: category })
+      dispatch({ type: actions.SETCATEGORY, category: category }),
+    onAuthSet: authenticated =>
+      dispatch({ type: actions.SETAUTH, authenticated: authenticated })
   };
 };
 

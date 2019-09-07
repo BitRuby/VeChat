@@ -108,11 +108,17 @@ const initialState = {
   ],
   avatar: null,
   username: "",
-  category: null
+  category: null,
+  authenticated: false
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case actions.SETAUTH:
+      return {
+        ...state,
+        authenticated: action.authenticated
+      };
     case actions.SETCATEGORY:
       return {
         ...state,

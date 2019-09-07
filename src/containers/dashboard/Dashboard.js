@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Contacts from "../../components/contacts/Contacts";
-import Messages from "../../components/messages/Messages";
+import Messages from "../messages/Messages";
 import styles from "./Dashboard.module.css";
 import Elizabeth9329 from "../../assets/images/icons/Elizabeth9329.png";
 import HotMegan11 from "../../assets/images/icons/HotMegan11.png";
