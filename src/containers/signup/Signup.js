@@ -13,7 +13,7 @@ import avatar2 from "../../assets/images/icons/avatar2.png";
 import avatar3 from "../../assets/images/icons/avatar3.png";
 import avatar4 from "../../assets/images/icons/avatar4.png";
 import avatar5 from "../../assets/images/icons/avatar5.png";
-export class Signup extends Component {
+class Signup extends Component {
   state = {
     modalShow: false,
     avatar: avatar1,
